@@ -5,8 +5,9 @@ body{
 
 button{outline: none;}
 a{text-decoration: none !important;color: white;outline: none;}
-ul{padding: 0;}
+ul{padding: 0;margin: 0;}
 li{list-style: none;}
+label{margin: 0;}
 
 /********nav********/
 
@@ -17,12 +18,16 @@ nav {
     right: 0;
     padding: 0 !important;
 }
+nav.blue{
+    background: #00051D;
+    position: relative !important;
+}
 .navbar-dark .navbar-toggler{background: #000417c7;}
 button:focus{outline: none;}
 .green_btn {
     background: #16E188;
     padding: 7px 30px;
-    border-radius: 5px;
+    border-radius: 4px;
     border: none;
     color: white;
     font-size: 16px;
@@ -99,7 +104,7 @@ li:nth-child(4) a {
 li.help_li{position: relative;}
 li.help_li:hover .help_tooltip{
     opacity: 1;
-    display: block;
+    z-index: 1;
 }
 
 li.help_li .help_tooltip {
@@ -111,9 +116,8 @@ li.help_li .help_tooltip {
     border-radius: 7px;
     margin-top: 10px;
     opacity: 0;
-    display: none;
     transition: .3s ease;
-    transition-delay: .2s;
+    transition-delay: .3s;
 }
 .help_tooltip h3{
     font-size: 13px;
@@ -136,10 +140,11 @@ li.help_li .help_tooltip {
 }
 
 
+
 /********sec1********/
 
 .sec_1 {
-    background: url(img/banner.jpg) center top no-repeat;
+    background: url(../img/banner.jpg) center top no-repeat;
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -195,7 +200,7 @@ li.help_li .help_tooltip {
 
 .sec_2 h2::before{
     content: "";
-    background: url(img/underline_1.svg) top center no-repeat;
+    background: url(../img/underline_1.svg) top center no-repeat;
     height: 100%;
     display: block;
     width: 120px;
@@ -242,7 +247,7 @@ li.help_li .help_tooltip {
 }
 .sec2_box.first::after{
     content: "";
-    background: url(img/dotted-line.png) top center no-repeat;
+    background: url(../img/dotted-line.png) top center no-repeat;
     position: absolute;
     right: -80%;
     width: 100%;
@@ -252,7 +257,7 @@ li.help_li .help_tooltip {
 }
 .sec2_box.second::after{
     content: "";
-    background: url(img/dotted-line.png) top center no-repeat;
+    background: url(../img/dotted-line.png) top center no-repeat;
     position: absolute;
     right: -80%;
     width: 100%;
@@ -289,7 +294,7 @@ li.help_li .help_tooltip {
 
 .sec_3 h2::before{
     content: "";
-    background: url(img/underline_2.svg) top center no-repeat;
+    background: url(../img/underline_2.svg) top center no-repeat;
     height: 100%;
     display: block;
     width: 120px;
@@ -322,7 +327,7 @@ h5.trending_title {
 /***********sec_4**********/
 
 .sec_4{
-    background: url(img/submit-banner.svg) top center no-repeat;
+    background: url(../img/submit-banner.svg) top center no-repeat;
     background-size: cover;
 }
 
@@ -359,7 +364,7 @@ h5.trending_title {
 
 .sec_5 h2::before{
     content: "";
-    background: url(img/underline_1.svg) top center no-repeat;
+    background: url(../img/underline_1.svg) top center no-repeat;
     height: 100%;
     display: block;
     width: 120px;
@@ -430,7 +435,7 @@ h5.trending_title {
 
 .sec_7 {
     padding: 80px 0 0;
-    background: url(img/bg-image.jpg) top center no-repeat;
+    background: url(../img/bg-image.jpg) top center no-repeat;
     background-size: cover;
 }
 .sec_7 .row{
@@ -474,7 +479,7 @@ h5.trending_title {
 
 .sec_8 h2::before{
     content: "";
-    background: url(img/underline_1.svg) top center no-repeat;
+    background: url(../img/underline_1.svg) top center no-repeat;
     height: 115%;
     width: 130px;
     position: absolute;
@@ -618,14 +623,467 @@ p.account_title {
     margin-top: 7px;
 }
 
+/**********Submit-track***********/
+
+
 section.sec_1.submit_track{
-background: url(img/submit-track/banner.jpg) center top no-repeat;
+background: url(../img/submit-track/banner.jpg) center top no-repeat;
+background-size: cover;
+margin: 50px 0 !important;
 }
+
+section.sec_1.submit_track .sec1_content{
+width: 50%;
+}
+
+
+
 .sec_1.submit_track h2{
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: white;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin: 0 0 30px 0;
+}
+.st_card {
+    border-radius: 8px;
+    display: flex;
+    background: white;
+    align-items: center;
+    padding: 5px;
+    margin: 40px 0;
+}
+.card_thumbnail {
+    position: relative;
+    width: 35%;
+    cursor: pointer;
+}
+.st_card img{
+    width: 100%;
+    height: 100%;
+    transition: .5s ease-in-out;
+}
+.card_thumbnail:hover img{
+    filter: brightness(0.5);
+}
+img.play_icon {
+    position: absolute;
+    width: 50px !important;
+    height: 50px !important;
+    left: 37%;
+    top: 30%;
+    filter: brightness(1) !important;
+
+}
+.st_card .card_content{
+    text-align: left;
+    padding: 15px;  
+    width: 65%;
+
+}
+
+.st_card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #00051D;
+}
+.st_card h4 {
+    font-size: 16px;
+    color: #383838;
+}
+.st_card a{color: #0000ffde;}
+.st_card p{
+    color: darkgrey;
+    margin: 20px 0 0 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.st_bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.st_bottom a{color: #c5c5c5;}
+.st_bottom a:hover{color: grey;}    
+
+/**********Genre_sec***********/
+
+
+section.genre_sec {
+    padding: 70px 0;
+    background: #F9FBFD;
+}
+h3.filter_title {
+    font-size: 15px;
+    color: grey;
+    margin: 25px 0 0 0;
+}
+.filter_bar ul li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+
+.filter_bar {
+    box-shadow: 2px 1.5px 9px -3px grey;
+    padding: 10px 20px;
+    border-radius: 50px;
+    position: relative;
+}
+h3.filter_head {
+    margin: 20px 0;
+    font-weight: 600;
+}
+.selected_bar ul li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+.selected_title {
+    background: #D2FFDD;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: #5f5f5f;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.selected_title p{ 
+       margin: 0;
+    font-weight: 500;
+    font-size: 13px;
+}
+h5.playlist_count {
+    color: #515151;
+
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+.selected_bar ul li a {
+    color: grey;
+    margin-left: 5px;
+    font-size: 10px;
+}
+.genre_card {
+    box-shadow: 3px 5px 5px 1px #dddddde0;
+    padding: 5px;
+    display: flex;
+    border-radius: 7px;
+    background: white;
+    border: 1px solid #dddddd57;
+    margin: 15px 0;
+}
+.genre_filter_top {
+    margin-bottom: 50px;
+}
+.genre_img {
+    width: 35%;
+}
+.genre_card img{width: 100%;}
+p.g_title_top {
+    font-size: 13px;
+    margin: 0 0 3px;
+    color: #9f9f9f;
+    font-weight: 500;
+}
+p.g_title_top span {
+    margin-left: 15px;
+}
+.genre_content {
+    width: 65%;
+    margin: 5px 15px;
+    position: relative;
+}
+.genre_content input{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+h3.g_song_name {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 20px 0 5px 0;
+}p.g_title_bottom {
+    font-size: 13px;
+    margin: 0;
+}.genre_content input {
+    position: absolute;
+    right: 0;
+    transform: scale(1.5);
+}
+
+p.g_title_bottom a {
+   color: blue;
+}
+
+.genre_content .dropdown{
+    float: right;
+    margin: 10px 0 0;
+}
+.genre_content .dropdown button {
+    border: none;
+    background: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #b8b8b8;
+}
+.genre_content .dropdown button::after {
+    content: "\f078";
+    font-family: 'FontAwesome';
+    border: none !important;
+    position: relative;
+    top: 4px;
+}
+
+button.filter_dropdown{
+    border: none;
+    background: none;
+    padding: 5px 7px;
+    color: #3e3e3e;
+} 
+
+button.filter_dropdown:hover{
+    background: #EEF1FB;
+    font-weight: 600;
+
+}
+.dropdown-menu.show{
+    top: 5px !important;
+}
+.dropdown.show button.filter_dropdown {
+    background: #EEF1FB;
+    font-weight: 600;
+}
+
+button.filter_dropdown::after{
+    content: "\f078";
+    font-family: 'FontAwesome';
+    border: none !important;
+    position: relative;
+    top: 4px;
+    margin: 0;
+
+} 
+.continue_btn {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+.continue_btn a {
+    color: #828282;
+    font-weight: 500;
+}
+.continue_btn i{
+    margin-left: 5px;
+    color: black;
+}
+
+.song_submision {
+    background: #F9FBFD;
+    padding: 120px 0;
+    text-align: center;
+}
+.song_submision h3 {
+    margin: 45px 0 25px;
+    font-weight: 600
+}
+.song_submision p{
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: #606060;
+}
+
+/**********Dashboard***********/
+
+.dashboard_sec {
+    padding: 70px 0 150px;
+    background: #F9FBFD;
+}
+
+.nav-tabs{
+    box-shadow: 2px 1.5px 9px -3px grey;
+    padding: 8px 10px;
+    border-radius: 50px;
+}
+.nav-tabs .nav-item{width: 50%;}
+
+.nav-tabs a.nav-link{
+    color: black !important;
+    text-align: center;
+    border: none;
+    padding: 15px 0 !important;
+    margin: 0;
+    font-size: 18px;
+}
+.nav-tabs a.nav-link:hover{
+    background: #EEF1FB;
+}
+.nav-tabs .nav-link.active {
+    background: #EEF1FB;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 25px 0px 0px 25px;
+}
+li:nth-child(2) .nav-link.active{
+    border-radius: 0 25px 25px 0;
+}
+
+section.dashboard_sec .row {
+    align-items: center;
+}
+
+.dashboard_top {
+    display: inline-flex;
+    align-items: center;
+    margin: 30px 0 0 0;
+}
+button.submit_song_btn{
+    border: none;
+    background: #B4C5FC;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 18px;
+    margin-left: 70px;
+    color: #00051D;
+    transition: .3s ease;
+}
+
+button.submit_song_btn:hover{
+    background: #9dade4;
+
+}
+.dashboard_top h3 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 26px;
+}
+.dashboard_sec h2{
+    font-weight: 600;
+    margin: 10px 0 25px 0;
+}
+.dashboard_sec h5{
+    color: #00051dd4;
+}
+
+p.submit_date {
+    float: left;
+    margin: 15px 0 0;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+    color: grey;
+}
+
+.artist_card {
+    box-shadow: 3px 5px 5px 1px #dddddde0;
+    padding: 20px;
+    display: flex;
+    border-radius: 7px;
+    background: white;
+    border: 1px solid #dddddd57;
+    margin: 15px 0;
+    align-items: center;
+}
+.artist_img {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    width: 35%;
+}
+.artist_img img {
+    width: 90%;
+    border-radius: 50%;
+    margin: auto;
+}
+.ac_top {
+    justify-content: space-between;
+    margin-bottom: 20px;
+    display: flex;
+    
+}
+.ac_bot {
+    display: flex;
+}
+p.ac_bot_count {
+    margin: 0;
+    font-weight: 600;
+    color: #00051dd4;
+}
+p.ac_bot_para {
+    margin-bottom: 1px;
+    color: #898989;
+    font-weight: 500;
+    font-size: 14px;
+}
+.ac_lbot {
+    border-right: 1px solid #bcbcbc;
+    padding-right: 12px;
+    margin-right: 12px;
+}
+h5.artist_tile {
+    font-weight: 600;
+    margin: 0;
+}
+.ac_top a{
+    color: #0d3ff7e0;
+}
+.artist_content{
+    width: 65%;
+    margin: 5px 15px;
+    position: relative;
+}
+
+/**********Submit_playlist***********/
+
+.sec_1.submit_playlist{
+background: url(../img/subnit-playlist/banner.png) center top no-repeat;
+background-size: cover;
+}
+
+
+
+
+.sec_1.submit_playlist h2{
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+}
+
+/**********Blog_sec***********/
+
+.blog_sec {
+    background: #F9FBFD;
+    padding: 70px 0 120px;
+}
+.blog_sec h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #00051D;
+}
+.blog_card {
+    box-shadow: 2px 5px 10px -1px #b9b9b9a1;
+    border-radius: 7px;
+    margin: 15px 0;
+}
+.blog_card img {
+    width: 100%;
+}
+.blog_card_content {
+    padding: 15px;
+}
+.blog_card p {
+    color: #00051D;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+.blog_card a{
+    color: #F22087;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 /**********Responsive***********/
@@ -641,6 +1099,10 @@ background: url(img/submit-track/banner.jpg) center top no-repeat;
     .sec2_box h3{margin: 20px 0 0 0;}
     .sec2_box.first::after{transform: rotate(35deg) translate(7px, 85px);}
     .sec2_box.second::after{transform: rotate(143deg) translate(618px, 150px);}
+    section.sec_1.submit_track .sec1_content{width: 60%;}
+    h3.g_song_name{margin: 10px 0 3px 0;}
+    .genre_content .dropdown{position: absolute;right: 0;bottom: 0;}
+    .filter_bar{border-radius: 20px;}
 }
 
 @media (max-width:992px){
@@ -654,7 +1116,20 @@ background: url(img/submit-track/banner.jpg) center top no-repeat;
     .sec3_box img{width: auto;}
     .sec_4 h2{font-size: 25px;}
     .sec8_right{margin-top: 15px;}
-
+    .st_card .card_content{padding: 10px;}
+    .st_card h3{font-size: 16px;}
+    .st_card h4{font-size: 14px;}
+    .st_card p{font-size: 13px; margin: 10px 0 0 0;}
+    section.sec_1.submit_track .sec1_content{width: 80%;}
+    .genre_card{flex-direction: column;border:1px solid #ddddddf7}
+    .genre_img{width: 100%;}
+    .genre_content{width: 92%;}
+    .genre_content{    margin: 15px 15px;}
+    .artist_card {flex-direction: column;}
+    .artist_img{width: 100%;}
+    .artist_content{width: 100%;}
+    .ac_top{margin-top: 20px;}
+    .ac_bot{text-align: center;justify-content: center;}
 }
 
 
@@ -679,10 +1154,17 @@ background: url(img/submit-track/banner.jpg) center top no-repeat;
     .sec8_content{padding: 10px;}
     .sec_8 h2{margin-right:0;font-size: 28px;}
     .sec8_content h3{font-size: 20px;}
+    .card_thumbnail{width: auto;}
+    .st_card .card_content{width: auto;}
+    .sec_1.submit_track h2{font-size: 2rem;}
+    h3.filter_title{margin:25px 0}
 }
 
 
 @media (max-width:442px){
     .login_form{width: 300px;}
-
+    .st_card{flex-direction: column;}
+    .st_card .card_content{text-align: center;}
+    .dashboard_top{display: block;text-align: center;}
+    button.submit_song_btn{margin: 20px 0;}
 }
